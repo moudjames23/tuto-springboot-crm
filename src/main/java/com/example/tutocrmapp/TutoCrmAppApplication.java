@@ -30,7 +30,7 @@ public class TutoCrmAppApplication {
                     .phoneNumber("620029489")
                     .build();
 
-            customerRepository.save(customer);
+            //customerRepository.save(customer);
         };
     }
 }
