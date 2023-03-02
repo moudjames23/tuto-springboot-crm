@@ -40,7 +40,7 @@ class CustomerRepositoryTest {
     }
 
     @Test
-    void itShouldNotFindCustomerWhenPhoneNumberDoesExist() {
+    void itShouldNotFindCustomerWhenPhoneNumberDoesNotExist() {
         // Given
         String phone = "626656820";
 
@@ -53,7 +53,7 @@ class CustomerRepositoryTest {
 
 
     @Test
-    void itShouldSaveCustomerWhenFirstNameIsRequire() {
+    void itShouldNotSaveCustomerWhenFirstNameIsMissing() {
         // Given
         Customer customer = Customer.builder()
                 .lastName("Diallo")
@@ -67,7 +67,7 @@ class CustomerRepositoryTest {
     }
 
     @Test
-    void itShouldSaveCustomerWhenLastNameIsRequire() {
+    void itShouldNotSaveCustomerWhenLastNameIsMissing() {
         // Given
         Customer customer = Customer.builder()
                 .firstName("Moud")
@@ -81,7 +81,7 @@ class CustomerRepositoryTest {
     }
 
     @Test
-    void itShouldSaveCustomerWhenPhoneNumberIsRequire() {
+    void itShouldNotSaveCustomerWhenPhoneNumberIsMissing() {
         // Given
         Customer customer = Customer.builder()
                 .lastName("Moud")
