@@ -38,6 +38,6 @@ public class AppExceptionHandler {
                 .stream()
                 .collect(Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage));
 
-        return response(HttpStatus.BAD_REQUEST, "Erreurs", errors);
+        return response(HttpStatus.BAD_REQUEST, "NOK", errors);
     }
 }

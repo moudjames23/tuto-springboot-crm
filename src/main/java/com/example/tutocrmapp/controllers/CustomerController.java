@@ -34,7 +34,7 @@ public class CustomerController {
                 .map(customer -> modelMapper.map(customer, CustomerDto.class))
                 .collect(Collectors.toList());
 
-        return response(HttpStatus.OK, "OK", customerService);
+        return response(HttpStatus.OK, "OK", customers);
     }
 
     @GetMapping("/{id}")
